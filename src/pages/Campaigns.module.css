@@ -1,0 +1,194 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.connectBanner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--color-surface);
+    border: 1px solid rgba(24, 119, 242, 0.3);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+}
+
+.connectBanner>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.connectBanner strong {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+}
+
+.connectBanner span {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+}
+
+.demoTag {
+    font-size: var(--font-size-xs) !important;
+    color: var(--color-primary) !important;
+    background: var(--color-primary-glow);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+.campaignCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.campTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campTitle h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+}
+
+.campStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-success);
+}
+
+.campDates {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+}
+
+.budgetBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.budgetTrack {
+    flex: 1;
+    height: 6px;
+    background: var(--color-surface-3);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.budgetFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: var(--radius-full);
+    transition: width 0.8s ease;
+}
+
+.budgetBar>span {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+    white-space: nowrap;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 1200px) {
+    .metricsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.metric {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.metricIcon {
+    color: var(--color-primary);
+}
+
+.metricLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+}
+
+.metricValue {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.highlight {
+    color: var(--color-success) !important;
+}
+
+.adsSection {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.adsHead {
+    display: grid;
+    grid-template-columns: 2fr 1fr 80px 100px 80px 70px;
+    padding: 10px 16px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.adRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 80px 100px 80px 70px;
+    padding: 12px 16px;
+    font-size: var(--font-size-sm);
+    border-bottom: 1px solid var(--color-border);
+    transition: background var(--transition-fast);
+    align-items: center;
+}
+
+.adRow:last-child {
+    border-bottom: none;
+}
+
+.adRow:hover {
+    background: var(--color-surface-3);
+}
+
+.adName {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.cpl {
+    color: var(--color-success) !important;
+    font-weight: 700;
+}

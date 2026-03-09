@@ -1,0 +1,86 @@
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color var(--transition-fast), transform var(--transition-fast);
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: var(--color-border-light);
+    transform: translateY(-2px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.iconBox {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.value {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    margin-top: 4px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.delta {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    padding: 1px 6px;
+}
+
+.pos {
+    color: var(--color-success);
+    background: var(--color-success-bg);
+}
+
+.neg {
+    color: var(--color-danger);
+    background: var(--color-danger-bg);
+}
+
+.deltaLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+}
+
+.chart {
+    margin: 0 -20px;
+    height: 40px;
+}

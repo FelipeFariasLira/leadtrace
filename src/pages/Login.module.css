@@ -1,0 +1,243 @@
+.page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background blobs */
+.blob1,
+.blob2,
+.blob3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.blob1 {
+    width: 500px;
+    height: 500px;
+    background: #4a9eff;
+    top: -200px;
+    left: -200px;
+}
+
+.blob2 {
+    width: 400px;
+    height: 400px;
+    background: #f5a623;
+    bottom: -150px;
+    right: -150px;
+}
+
+.blob3 {
+    width: 300px;
+    height: 300px;
+    background: #6366f1;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.4s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.logoLead {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    letter-spacing: -0.03em;
+}
+
+.logoTrace {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.03em;
+}
+
+.tagline {
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-muted);
+    margin-bottom: 28px;
+}
+
+/* Facebook button */
+.facebookBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    background: #1877f2;
+    color: white;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-base);
+    letter-spacing: 0.01em;
+}
+
+.facebookBtn:hover:not(:disabled) {
+    background: #1464d8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(24, 119, 242, 0.35);
+}
+
+.facebookBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.orDivider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: var(--color-muted);
+    font-size: var(--font-size-xs);
+}
+
+.orDivider span {
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.orDivider p {
+    white-space: nowrap;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.inputWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 12px;
+    color: var(--color-muted);
+    pointer-events: none;
+}
+
+.input {
+    padding-left: 38px !important;
+}
+
+.eyeBtn {
+    position: absolute;
+    right: 12px;
+    color: var(--color-muted);
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: color var(--transition-fast);
+}
+
+.eyeBtn:hover {
+    color: var(--color-text);
+}
+
+.forgot {
+    align-self: flex-start;
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+    margin-top: -8px;
+}
+
+.forgot:hover {
+    color: var(--color-accent);
+}
+
+.error {
+    background: var(--color-danger-bg);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--color-danger);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-size: var(--font-size-sm);
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-color: #0b0f1a;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: block;
+}
+
+.register {
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-muted);
+    margin-top: 20px;
+}
+
+.registerLink {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.registerLink:after {
+    content: ' ›';
+}

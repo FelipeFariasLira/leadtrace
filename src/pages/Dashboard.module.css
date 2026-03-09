@@ -1,0 +1,184 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* KPI Grid */
+.kpiGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 1400px) {
+    .kpiGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .kpiGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Section header */
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.sectionIcon {
+    color: var(--color-primary);
+}
+
+.badge {
+    margin-left: auto;
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+    background: var(--color-surface-3);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+/* Funnel */
+.funnelCard {}
+
+.funnelStats {
+    display: flex;
+    gap: 0;
+    margin-bottom: 16px;
+}
+
+.funnelStat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 16px 0 0;
+    border-right: 1px solid var(--color-border);
+}
+
+.funnelStat:last-child {
+    border-right: none;
+}
+
+.funnelCount {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.funnelLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+.funnelPct {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.funnel {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 80px;
+    margin: 16px -6px 0;
+}
+
+.funnelSegment {
+    display: flex;
+    align-items: flex-end;
+}
+
+.funnelBar {
+    width: 100%;
+    border-radius: 4px;
+    opacity: 0.85;
+    transition: opacity var(--transition-fast);
+}
+
+.funnelBar:hover {
+    opacity: 1;
+}
+
+/* Ads Ranking Table */
+.rankingCard {}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tableHead {
+    display: grid;
+    grid-template-columns: 32px 2fr 1.5fr 80px 120px 100px 80px 70px;
+    padding: 8px 12px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 32px 2fr 1.5fr 80px 120px 100px 80px 70px;
+    padding: 12px 12px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    transition: background var(--transition-fast);
+    align-items: center;
+}
+
+.tableRow:hover {
+    background: var(--color-surface-2);
+}
+
+.rank {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-surface-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-muted);
+}
+
+.adName {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.campaign {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+}
+
+.num {
+    color: var(--color-text-secondary);
+}
+
+.cpl {
+    color: var(--color-success) !important;
+    font-weight: 700;
+}
