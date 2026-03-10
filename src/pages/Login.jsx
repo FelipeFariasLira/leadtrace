@@ -43,16 +43,21 @@ export default function Login() {
             <div className={styles.card}>
                 {/* Logo */}
                 <div className={styles.logo}>
-                    <svg width="40" height="48" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 2C15.163 2 8 9.163 8 18c0 11.25 16 36 16 36S40 29.25 40 18C40 9.163 32.837 2 24 2z" fill="url(#pinGL)" />
-                        <circle cx="24" cy="18" r="6" fill="none" stroke="white" strokeWidth="2.5" opacity="0.9" />
-                        <circle cx="24" cy="18" r="3" fill="#f5a623" />
-                        <rect x="30" y="4" width="8" height="8" rx="1.5" fill="#f5a623" opacity="0.95" />
+                    <svg width="44" height="52" viewBox="0 0 72 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36 2C19.4 2 6 15.4 6 32C6 54.5 36 84 36 84C36 84 66 54.5 66 32C66 15.4 52.6 2 36 2Z" fill="url(#ltLoginPin)" />
+                        <circle cx="36" cy="32" r="16" stroke="white" strokeWidth="3.5" fill="none" opacity="0.9" />
+                        <circle cx="36" cy="32" r="9" fill="url(#ltLoginCenter)" />
+                        <rect x="46" y="8" width="13" height="13" rx="2.5" fill="#F5A621" />
                         <defs>
-                            <linearGradient id="pinGL" x1="8" y1="2" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stopColor="#4a9eff" />
-                                <stop offset="100%" stopColor="#1d4ed8" />
+                            <linearGradient id="ltLoginPin" x1="6" y1="2" x2="66" y2="84" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stopColor="#4DAEF8" />
+                                <stop offset="100%" stopColor="#1A6FCC" />
                             </linearGradient>
+                            <radialGradient id="ltLoginCenter" cx="38%" cy="33%" r="62%">
+                                <stop offset="0%" stopColor="#FBB040" />
+                                <stop offset="55%" stopColor="#F47520" />
+                                <stop offset="100%" stopColor="#C83008" />
+                            </radialGradient>
                         </defs>
                     </svg>
                     <div>

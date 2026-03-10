@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import {
     DndContext, closestCenter, KeyboardSensor, PointerSensor,
-    useSensor, useSensors, DragOverlay
+    useSensor, useSensors, DragOverlay, useDroppable
 } from '@dnd-kit/core'
 import {
     SortableContext, verticalListSortingStrategy, useSortable
@@ -95,9 +95,14 @@ export default function Kanban() {
 
 function KanbanColumn({ column, onOpenLead }) {
     const closedValue = column.leads.reduce((s, l) => s + l.value, 0)
+    const { setNodeRef, isOver } = useDroppable({ id: column.id })
 
     return (
-        <div className={styles.column} id={`col-${column.id}`}>
+        <div
+            ref={setNodeRef}
+            className={`${styles.column} ${isOver ? styles.droppableOver : ''}`}
+            id={`col-${column.id}`}
+        >
             <div className={styles.colHeader} style={{ borderTopColor: column.color }}>
                 <div className={styles.colTitle}>
                     <span className={styles.colDot} style={{ background: column.color }} />

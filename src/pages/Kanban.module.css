@@ -54,6 +54,12 @@
     flex-direction: column;
     min-height: 0;
     overflow: hidden;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.droppableOver {
+    border-color: var(--color-primary) !important;
+    background: rgba(245, 166, 35, 0.04) !important;
 }
 
 .colHeader {
