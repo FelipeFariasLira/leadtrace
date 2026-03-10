@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Mail, Lock, Eye, EyeOff, Facebook } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 import styles from './Login.module.css'
+import logoSrc from '../assets/logo-leadtrace.png'
 
 export default function Login() {
     const { login, loginWithFacebook, loading } = useAuth()
@@ -42,28 +43,8 @@ export default function Login() {
 
             <div className={styles.card}>
                 {/* Logo */}
-                <div className={styles.logo}>
-                    <svg width="44" height="52" viewBox="0 0 72 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M36 2C19.4 2 6 15.4 6 32C6 54.5 36 84 36 84C36 84 66 54.5 66 32C66 15.4 52.6 2 36 2Z" fill="url(#ltLoginPin)" />
-                        <circle cx="36" cy="32" r="16" stroke="white" strokeWidth="3.5" fill="none" opacity="0.9" />
-                        <circle cx="36" cy="32" r="9" fill="url(#ltLoginCenter)" />
-                        <rect x="46" y="8" width="13" height="13" rx="2.5" fill="#F5A621" />
-                        <defs>
-                            <linearGradient id="ltLoginPin" x1="6" y1="2" x2="66" y2="84" gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stopColor="#4DAEF8" />
-                                <stop offset="100%" stopColor="#1A6FCC" />
-                            </linearGradient>
-                            <radialGradient id="ltLoginCenter" cx="38%" cy="33%" r="62%">
-                                <stop offset="0%" stopColor="#FBB040" />
-                                <stop offset="55%" stopColor="#F47520" />
-                                <stop offset="100%" stopColor="#C83008" />
-                            </radialGradient>
-                        </defs>
-                    </svg>
-                    <div>
-                        <span className={styles.logoLead}>Lead</span>
-                        <span className={styles.logoTrace}>trace</span>
-                    </div>
+                <div className={styles.logo} style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={logoSrc} alt="Leadtrace Logo" style={{ height: '48px', objectFit: 'contain' }} />
                 </div>
 
                 <p className={styles.tagline}>Rastreie leads do anúncio ao fechamento</p>
