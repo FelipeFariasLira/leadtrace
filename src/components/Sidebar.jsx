@@ -94,6 +94,7 @@ export default function Sidebar({ collapsed, onToggle }) {
 }
 
 import logoSrc from '../assets/logo-leadtrace.png'
+import logoIconSrc from '../assets/logo-icon.png'
 
 function LogoFull() {
     return (
@@ -106,7 +107,7 @@ function LogoFull() {
 function LogoIconOnly() {
     return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
-            <img src={logoSrc} alt="Leadtrace Logo" style={{ width: '32px', height: '32px', objectFit: 'cover', objectPosition: 'left center' }} />
+            <img src={logoIconSrc} alt="Leadtrace Icon" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
         </div>
     )
 }
